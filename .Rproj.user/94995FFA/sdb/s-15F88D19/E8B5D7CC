@@ -1,0 +1,16 @@
+{
+    "contents" : "# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\nlibrary(shiny)\n\nshinyUI(pageWithSidebar(\n  \n  # Application title\n  headerPanel(\"Central Limit Theorem Showcase - Exponential Distribution\"),\n  \n  # Sidebar with a slider input for number of bins\n  sidebarPanel(\n    sliderInput(\"lambda\",\n                \"Lambda of exponential:\",\n                min = 0.1,\n                max = 1,\n                value = 0.2),\n    sliderInput(\"sims\",\n                \"Number of sims:\",\n                min = 100,\n                max = 1000,\n                value = 500),\n    sliderInput(\"n\",\n                \"Sample size:\",\n                min = 10,\n                max = 100,\n                value = 40)\n  ),\n  \n  # Show a plot of the generated distribution\n  mainPanel(\n    tabsetPanel(\n      tabPanel(\"Normalized Plot\", plotOutput(\"distPlot\")), \n      tabPanel(\"Sample Mean Plot\", plotOutput(\"smPlot\")),\n      tabPanel(\"Documentation\", htmlOutput(\"document\"))\n    )    \n  )\n))\n",
+    "created" : 1429409142746.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2725326416",
+    "id" : "E8B5D7CC",
+    "lastKnownWriteTime" : 1429419176,
+    "path" : "~/GitHub/DataProdShiny/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
